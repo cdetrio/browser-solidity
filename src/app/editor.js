@@ -169,7 +169,7 @@ function Editor (loadingFromGist, storage) {
       }
       SOL_CACHE_FILE = SOL_CACHE_UNTITLED + untitledCount;
       files.push(SOL_CACHE_FILE);
-      storage.set(SOL_CACHE_FILE, BALLOT_EXAMPLE); // defined in assets/js/ballot.sol.js
+      storage.set(SOL_CACHE_FILE, SHA_EXAMPLE); // defined in assets/js/sha.sol.js
     }
 
     SOL_CACHE_FILE = files[0];
