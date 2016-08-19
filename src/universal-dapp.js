@@ -7,6 +7,7 @@ var ethJSABI = require('ethereumjs-abi');
 var EthJSBlock = require('ethereumjs-block');
 var BN = ethJSUtil.BN;
 var EventManager = require('./lib/eventManager');
+var dJSON = require('dirty-json-hex');
 
 /*
   trigger debugRequested
@@ -442,7 +443,7 @@ UniversalDApp.prototype.getCallButton = function (args) {
 
     var funArgs = '';
     try {
-      funArgs = $.parseJSON('[' + inputField.val() + ']');
+      funArgs = dJSON.parse('[' + inputField.val() + ']');
     } catch (e) {
       replaceOutput($result, $('<span/>').text('Error encoding arguments: ' + e));
       return;
